@@ -42,16 +42,35 @@ img {
 /*-------------------------------------- Simon Game -------------------*/
 
 .simon-game {
-    width: 100%;
-    height: 500px;
-    margin-top: 50px;
+    height: 90vh;
+    margin-top: 70px;
 }
 
-.animate {
-    width: 620px;
-    margin: 150px auto;
+.game-row {
+    height: 50%;
 }
 
-.highlight {
-    background-color: pink;
+#red {
+    background-color: red;
+    border-radius: 100% 0 0;
 }
+
+#green {
+    background-color: green;
+    border-radius: 0 100% 0 0;
+}
+
+#blue { 
+    background-color: blue;
+    border-radius: 0 0 0 100%;
+}
+
+#yellow {
+    background-color: yellow;
+    border-radius: 0 0 100% 0;
+}
+
+.color-btn {
+    max-width: 50%;
+}
+

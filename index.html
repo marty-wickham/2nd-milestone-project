@@ -30,26 +30,24 @@
             </ul>
         </div>
         <div class="section simon-game">
-            <div class="animate">
-                <svg height="620" width="620">
-                  <polygon onclick="playSequence()" points="0,300 300,300, 300,0" style="fill:green;stroke:silver;stroke-width:3" id="red" />
-                  <polygon points="320,300 320,0, 620,300" style="fill:red;stroke:silver;stroke-width:3" id="green" />
-                  <polygon points="0,320 300,320, 300,620" style="fill:blue;stroke:silver;stroke-width:3" id="blue" />
-                  <polygon points="320,320 620,320, 320,620" style="fill:yellow;stroke:silver;stroke-width:3" id="yellow" />
-                </svg>
-                
-                <button onclick="gameMove()">click me</button>
-                
-                <p id="random">hello there</p>
+            <div class="row game-row justify-content-center">
+                <div class="col-4 color-btn" id="red">
+                    
+                </div>
+                <div class="col-4 color-btn" id="green">
+                    
+                </div>
+            </div>
+            <div class="row game-row justify-content-center">
+                <div class="col-4 color-btn" id="blue">
+                    
+                </div>
+                <div class="col-4 color-btn" id="yellow">
+                    
+                </div>
             </div>
         </div>
-        <div class="section svg">
-
-        </div>
-        <div class="section">
-
-        </div>
-        <div class="section">
+        <div class="footer">
 
         </div>
     </div>
