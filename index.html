@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2nd Milestone Project</title>
+
+    <!-- css and js links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="assets/js/simon.js"></script>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="">Pictures</a></li>
+                <li class="nav-item"><a href="">Videos</a></li>
+                <li class="nav-item">
+                    <div class="logo">
+                        <img src="https://thumbs.dreamstime.com/z/simple-image-triangle-motif-logo-simple-easy-cool-logo-best-your-business-simple-logo-triangle-red-113714424.jpg" alt="logo"></img>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="">Games</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="section simon-game">
+            <div class="animate">
+                <svg height="620" width="620">
+                  <polygon onclick="playSequence()" points="0,300 300,300, 300,0" style="fill:green;stroke:silver;stroke-width:3" id="red" />
+                  <polygon points="320,300 320,0, 620,300" style="fill:red;stroke:silver;stroke-width:3" id="green" />
+                  <polygon points="0,320 300,320, 300,620" style="fill:blue;stroke:silver;stroke-width:3" id="blue" />
+                  <polygon points="320,320 620,320, 320,620" style="fill:yellow;stroke:silver;stroke-width:3" id="yellow" />
+                </svg>
+                
+                <button onclick="gameMove()">click me</button>
+                
+                <p id="random">hello there</p>
+            </div>
+        </div>
+        <div class="section svg">
+
+        </div>
+        <div class="section">
+
+        </div>
+        <div class="section">
+
+        </div>
+    </div>
+</body>
+
+</html>
