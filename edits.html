@@ -1,14 +1,30 @@
-<div class="animate">
-    <svg height="620" width="620">
-                  <polygon onclick="playSequence()" points="0,300 300,300, 300,0" style="fill:green;stroke:silver;stroke-width:3" id="red" />
-                  <polygon points="320,300 320,0, 620,300" style="fill:red;stroke:silver;stroke-width:3" id="green" />
-                  <polygon points="0,320 300,320, 300,620" style="fill:blue;stroke:silver;stroke-width:3" id="blue" />
-                  <polygon points="320,320 620,320, 320,620" style="fill:yellow;stroke:silver;stroke-width:3" id="yellow" />
-                </svg>
-
-    <button onclick="gameMove()">click me</button>
-
-    <p id="random">hello there</p>
+<div class="navbar">
+    <ul class="nav-list">
+        <li class="nav-item"><a href="">Pictures</a></li>
+        <li class="nav-item"><a href="">Videos</a></li>
+        <li class="nav-item">
+            <div class="logo">
+                <img src="https://thumbs.dreamstime.com/z/simple-image-triangle-motif-logo-simple-easy-cool-logo-best-your-business-simple-logo-triangle-red-113714424.jpg" alt="logo"></img>
+            </div>
+        </li>
+        <li class="nav-item"><a href="">Games</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+    </ul>
 </div>
-            
-<!-- svg layout -->
+
+<div class="row game-row">
+    <div class="col color-btn" id="red">
+
+    </div>
+    <div class="col color-btn" id="green">
+
+    </div>
+</div>
+<div class="row game-row">
+    <div class="col color-btn" id="blue">
+
+    </div>
+    <div class="col color-btn" id="yellow">
+
+    </div>
+</div>

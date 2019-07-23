@@ -41,13 +41,20 @@ img {
 
 /*-------------------------------------- Simon Game -------------------*/
 
-.simon-game {
-    height: 90vh;
-    margin-top: 70px;
+.game-container {
+    max-width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
 }
 
-.game-row {
-    height: 50%;
+.col-button {
+    width: 305px;
+    height: 305px;
+    position: absolute;
+    margin: 30px;
 }
 
 #red {
@@ -58,19 +65,78 @@ img {
 #green {
     background-color: green;
     border-radius: 0 100% 0 0;
+    top: 0;
+    right: 0;
 }
 
-#blue { 
+#blue {
     background-color: blue;
     border-radius: 0 0 0 100%;
+    bottom: 0;
 }
 
 #yellow {
     background-color: yellow;
     border-radius: 0 0 100% 0;
+    bottom: 0;
+    right: 0;
 }
 
-.color-btn {
-    max-width: 50%;
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: silver;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 25px solid black;
 }
 
+#game-title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin-top: 30px;
+}
+
+.btn-box {
+    display: inline-block;
+    margin: 0 15px;
+    text-align: center;
+}
+
+#counter-display {
+    height: 50px;
+    width: 60px;
+    background-color: red;
+    border: 5px solid black;
+    border-radius: 10%;
+}
+
+.game-text {
+        font-weight: bold;
+}
+
+
+#start-btn {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+#strict-btn {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.btn-row {
+    text-align: center;
+}
