@@ -1,9 +1,15 @@
 $(document).ready(function() {
 
-    $("#red").click(function() {
+    $(".center").click(function() {
         $(this).addClass("highlight");
     });
+    
+    $("#red").click(function() {
+        $(this).addClass("highlight")
+    })
 });
+
+
 
 /* var game = {
     count: 0,

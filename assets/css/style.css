@@ -58,7 +58,7 @@ img {
 }
 
 #red {
-    background-color: red;
+    background-color: darkred;
     border-radius: 100% 0 0;
 }
 
@@ -145,5 +145,5 @@ img {
 /*-------------------------------------- JS -------------------*/
 
 .highlight {
-    background-color: blue;
+    background-color: red !important;
 }
