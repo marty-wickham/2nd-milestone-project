@@ -139,4 +139,11 @@ img {
 
 .btn-row {
     text-align: center;
+    margin-top: 10px;
+}
+
+/*-------------------------------------- JS -------------------*/
+
+.highlight {
+    background-color: blue;
 }

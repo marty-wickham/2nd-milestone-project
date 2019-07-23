@@ -1,3 +1,10 @@
+$(document).ready(function() {
+
+    $("#red").click(function() {
+        $(this).addClass("highlight");
+    });
+});
+
 /* var game = {
     count: 0,
     gameMemory: [],
@@ -26,7 +33,3 @@ function playSequence() {
     }
 }
 */
-
-$("#red").mouseenter(function() {
-    $(this).addClass("highlight");
-})
