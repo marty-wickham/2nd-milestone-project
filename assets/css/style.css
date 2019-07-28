@@ -116,8 +116,14 @@ img {
     border-radius: 10%;
 }
 
+#count {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+}
+
 .game-text {
-        font-weight: bold;
+    font-weight: bold;
 }
 
 

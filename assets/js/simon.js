@@ -3,11 +3,30 @@ $(document).ready(function() {
     $(".center").click(function() {
         $(this).addClass("highlight");
     });
-    
+
     $("#red").click(function() {
         $(this).addClass("highlight")
-    })
+    });
+
+
+
+    $("#star-btn").click(function() {
+        var count = $("#count").text(0);
+    });
+    
+    var gameSequence = [];
+
+    function fillArray() {
+        for(var i = 0; i < 31; i++)
+        gameSequence.push(Math.floor((Math.random() * 4) + 1));
+        console.log(gameSequence);
+    }
+    
+    fillArray();
+    
+
 });
+
 
 
 
