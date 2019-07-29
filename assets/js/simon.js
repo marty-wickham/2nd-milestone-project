@@ -10,51 +10,36 @@ $(document).ready(function() {
 
 
 
-    $("#star-btn").click(function() {
+    $(".btn-box").click(function() {
         var count = $("#count").text(0);
     });
-    
-    var gameSequence = [];
-
-    function fillArray() {
-        for(var i = 0; i < 31; i++)
-        gameSequence.push(Math.floor((Math.random() * 4) + 1));
-        console.log(gameSequence);
-    }
-    
-    fillArray();
-    
 
 });
 
+var score = 0;
+var gameSequence = [];
+var playerSequence = [];
 
-
-
-/* var game = {
-    count: 0,
-    gameMemory: [],
-    playerMemory: [],
-    colors: ["red", "green", "blue", "yellow"]
-};
-
-function newGame() {
-    game.count = 0;
-    game.gameMemory = [];
-    game.playerMemory = [];
+function fillArray() {
+    for (var i = 0; i < 30; i++) {
+        gameSequence.push(Math.floor((Math.random() * 4) + 1));
+    }
+    console.log(gameSequence);
 }
 
-newGame();
+fillArray();
 
-function gameMove() {
-    game.count++;
-    game.gameMemory.push(game.colors[Math.floor((Math.random() * 4) + 1)]);
+
+$(".btn-box").click(function() {
+    startGame();
+});
+
+function startGame() {
+    playSequence();
 }
-
-gameMove;
 
 function playSequence() {
-    for(var i = 0; i <= game.gameMemory.length; i++) {
-        document.getElementById(game.gameMemory[i]);
+    for (var i = 0; i < score + 1; i++) {
+        console.log(gameSequence[i]);
     }
 }
-*/
