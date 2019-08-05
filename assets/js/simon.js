@@ -1,21 +1,3 @@
-$(document).ready(function() {
-
-    $(".center").click(function() {
-        $(this).addClass("highlight");
-    });
-
-    $("#red").click(function() {
-        $(this).addClass("highlight")
-    });
-
-
-
-    $(".btn-box").click(function() {
-        var count = $("#count").text(0);
-    });
-
-});
-
 var score = 0;
 var gameSequence = [];
 var playerSequence = [];
@@ -30,8 +12,23 @@ function fillArray() {
 fillArray();
 
 
-$(".btn-box").click(function() {
-    startGame();
+$(document).ready(function() {
+
+    $("#start-btn").click(function() {
+        startGame();
+    });
+
+    $(".col-button").click(function() {
+        
+        button = $(this).attr("id");
+        
+        if (button == "red") {
+            playRed();
+            playerSequence.push(0);
+        }
+    })
+
+
 });
 
 function startGame() {
@@ -40,6 +37,15 @@ function startGame() {
 
 function playSequence() {
     for (var i = 0; i < score + 1; i++) {
-        console.log(gameSequence[i]);
+        if (gameSequence[i] === 0) {
+            playRed();
+        }
     }
+}
+
+
+function playRed() {
+    $("#red").click(functon() {
+        $(this).addClass("highlight-red").addClass("red-audio").setInterval(750);
+    })
 }
