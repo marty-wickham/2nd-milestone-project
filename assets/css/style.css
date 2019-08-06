@@ -63,14 +63,14 @@ img {
 }
 
 #green {
-    background-color: green;
+    background-color: darkgreen;
     border-radius: 0 100% 0 0;
     top: 0;
     right: 0;
 }
 
 #blue {
-    background-color: blue;
+    background-color: darkblue;
     border-radius: 0 0 0 100%;
     bottom: 0;
 }
@@ -150,6 +150,18 @@ img {
 
 /*-------------------------------------- JS -------------------*/
 
-.highlight {
+.highlight-red {
     background-color: red !important;
+}
+
+.highlight-green {
+    background-color: green !important;
+}
+
+.highlight-blue {
+    background-color: blue !important;
+}
+
+.highlight-yellow {
+    background-color: yellow !important;
 }
