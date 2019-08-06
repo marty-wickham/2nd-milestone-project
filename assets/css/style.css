@@ -76,7 +76,7 @@ img {
 }
 
 #yellow {
-    background-color: yellow;
+    background-color: gold;
     border-radius: 0 0 100% 0;
     bottom: 0;
     right: 0;
@@ -133,6 +133,7 @@ img {
     background-color: red;
     border-radius: 50%;
     border: 5px solid black;
+    z-index: 5;
 }
 
 #strict-btn {
