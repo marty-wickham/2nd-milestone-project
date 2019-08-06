@@ -1,16 +1,8 @@
 var score = 0;
 var gameSequence = [];
 var playerSequence = [];
-var start = false;
+var start = true;
 
-function fillArray() {
-    for (var i = 0; i < 30; i++) {
-        gameSequence.push(Math.floor((Math.random() * 4) + 1));
-    }
-    console.log(gameSequence);
-}
-
-fillArray();
 
 function playRed() {
     $("#red").addClass("highlight-red");
@@ -92,6 +84,8 @@ $(document).ready(function() {
 function playSequence() {
 
     for (var i = 0; i < score + 1; i++) {
+        
+        gameSequence.push(Math.floor((Math.random() * 4) + 1));
 
         if (gameSequence[i] === 1) {
             playRed();
@@ -106,4 +100,25 @@ function playSequence() {
             playYellow();
         }
     }
+    console.log(gameSequence);
+    checkPlayerTurn();
 }
+
+function checkPlayerTurn() {
+    
+    if (gameSequence == playerSequence) {
+        score++;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
