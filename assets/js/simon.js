@@ -2,6 +2,20 @@ var score = 0;
 var gameSequence = [];
 var playerSequence = [];
 var start = true;
+var redAudio = document.getElementById("red-audio");
+var greenAudio = document.getElementById("green-audio");
+var blueAudio = document.getElementById("blue-audio");
+var yellowAudio = document.getElementById("yellow-audio");
+
+
+function fillArray() {
+    for (var i = 0; i < 30; i++) {
+        gameSequence.push(Math.floor((Math.random() * 4) + 1));
+    }
+    console.log(gameSequence);
+}
+
+fillArray();
 
 
 function playRed() {
@@ -11,6 +25,7 @@ function playRed() {
         $("#red").removeClass("highlight-red")
 
     }, 500);
+    redAudio.play;
 }
 
 function playGreen() {
@@ -20,6 +35,7 @@ function playGreen() {
         $("#green").removeClass("highlight-green")
 
     }, 500);
+    greenAudio.play;
 }
 
 function playBlue() {
@@ -29,6 +45,7 @@ function playBlue() {
         $("#blue").removeClass("highlight-blue")
 
     }, 500);
+    blueAudio.play;
 }
 
 function playYellow() {
@@ -38,6 +55,7 @@ function playYellow() {
         $("#yellow").removeClass("highlight-yellow")
 
     }, 500);
+    yellowAudio.play;
 }
 
 
@@ -83,9 +101,10 @@ $(document).ready(function() {
 
 function playSequence() {
 
-    for (var i = 0; i < score + 1; i++) {
-        
-        gameSequence.push(Math.floor((Math.random() * 4) + 1));
+    for (var i = 0; i < gameSequence.length; i++) {
+
+      
+      
 
         if (gameSequence[i] === 1) {
             playRed();
@@ -100,25 +119,16 @@ function playSequence() {
             playYellow();
         }
     }
-    console.log(gameSequence);
+    
     checkPlayerTurn();
 }
 
+/*
 function checkPlayerTurn() {
-    
+
     if (gameSequence == playerSequence) {
         score++;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+*/
