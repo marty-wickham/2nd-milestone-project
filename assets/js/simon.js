@@ -2,7 +2,8 @@ var turn = 0;
 var sequenceIndex = 0;
 var gameSequence = [];
 var playerSequence = [];
-var active = false; /*
+var active = false;
+/*
 var redAudio = document.getElementById("red-audio");
 var greenAudio = document.getElementById("green-audio");
 var blueAudio = document.getElementById("blue-audio");
@@ -26,7 +27,7 @@ function playRed() {
         $("#red").removeClass("highlight-red")
 
     }, 500);
-   /* redAudio.play;*/
+    /* redAudio.play;*/
 }
 
 function playGreen() {
@@ -36,7 +37,7 @@ function playGreen() {
         $("#green").removeClass("highlight-green")
 
     }, 500);
-  /*  greenAudio.play;*/
+    /*  greenAudio.play;*/
 }
 
 function playBlue() {
@@ -46,7 +47,7 @@ function playBlue() {
         $("#blue").removeClass("highlight-blue")
 
     }, 500);
-   /* blueAudio.play;*/
+    /* blueAudio.play;*/
 }
 
 function playYellow() {
@@ -56,7 +57,7 @@ function playYellow() {
         $("#yellow").removeClass("highlight-yellow")
 
     }, 500);
-   /* yellowAudio.play;*/
+    /* yellowAudio.play;*/
 }
 
 // making sure the page has fully loaded before associating the buttons to functions.
@@ -73,28 +74,32 @@ $(document).ready(function() {
     $(".col-button").click(function() {
 
         button = $(this).attr("id");
-
-        if (button == "red") {
+        
+        if (button == "red" && active == true) {
             playRed();
             playerSequence.push(1);
+            checkPlayerTurn();
             console.log(playerSequence);
         }
 
-        if (button == "green") {
+        if (button == "green" && active == true) {
             playGreen();
             playerSequence.push(2);
+            checkPlayerTurn();
             console.log(playerSequence);
         }
 
-        if (button == "blue") {
+        if (button == "blue" && active == true) {
             playBlue();
             playerSequence.push(3);
+            checkPlayerTurn();
             console.log(playerSequence);
         }
 
-        if (button == "yellow") {
+        if (button == "yellow" && active == true) {
             playYellow();
             playerSequence.push(4);
+            checkPlayerTurn();
             console.log(playerSequence);
         }
     });
@@ -103,13 +108,14 @@ $(document).ready(function() {
 
 function playSequence() {
     sequenceIndex = 0;
-    turn = ++;
+    turn++;
     console.log(turn);
 
     var animateInterval = setInterval(function() {
-        if (sequenceIndex === turn-1) {
+        if (sequenceIndex === turn - 1) {
             active = true;
             clearInterval(animateInterval);
+            console.log(active);
         }
 
         if (gameSequence[sequenceIndex] === 1) {
@@ -128,12 +134,9 @@ function playSequence() {
         console.log(sequenceIndex);
 
     }, 800);
-    
-
-    /* checkPlayerTurn(); */
 }
 
-/*
+
 function checkPlayerTurn() {
 
     if (gameSequence == playerSequence) {
@@ -141,4 +144,4 @@ function checkPlayerTurn() {
     }
 }
 
-*/
+
