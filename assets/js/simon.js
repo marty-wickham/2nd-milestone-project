@@ -1,12 +1,14 @@
-var score = 0;
+var turn = 0;
+var sequenceIndex = 0;
 var gameSequence = [];
 var playerSequence = [];
-var start = true;
+var active = false; /*
 var redAudio = document.getElementById("red-audio");
 var greenAudio = document.getElementById("green-audio");
 var blueAudio = document.getElementById("blue-audio");
-var yellowAudio = document.getElementById("yellow-audio");
+var yellowAudio = document.getElementById("yellow-audio"); */
 
+// prefilling the sequence of numbers
 
 function fillArray() {
     for (var i = 0; i < 30; i++) {
@@ -15,8 +17,7 @@ function fillArray() {
     console.log(gameSequence);
 }
 
-fillArray();
-
+// animation functions for each button
 
 function playRed() {
     $("#red").addClass("highlight-red");
@@ -25,7 +26,7 @@ function playRed() {
         $("#red").removeClass("highlight-red")
 
     }, 500);
-    redAudio.play;
+   /* redAudio.play;*/
 }
 
 function playGreen() {
@@ -35,7 +36,7 @@ function playGreen() {
         $("#green").removeClass("highlight-green")
 
     }, 500);
-    greenAudio.play;
+  /*  greenAudio.play;*/
 }
 
 function playBlue() {
@@ -45,7 +46,7 @@ function playBlue() {
         $("#blue").removeClass("highlight-blue")
 
     }, 500);
-    blueAudio.play;
+   /* blueAudio.play;*/
 }
 
 function playYellow() {
@@ -55,72 +56,81 @@ function playYellow() {
         $("#yellow").removeClass("highlight-yellow")
 
     }, 500);
-    yellowAudio.play;
+   /* yellowAudio.play;*/
 }
 
+// making sure the page has fully loaded before associating the buttons to functions.
 
 $(document).ready(function() {
 
     $("#start-btn").click(function() {
-
+        turn = 0;
+        gameSequence = [];
+        fillArray();
         playSequence();
     });
 
-    if (start == true) {
+    $(".col-button").click(function() {
 
-        $(".col-button").click(function() {
+        button = $(this).attr("id");
 
-            button = $(this).attr("id");
+        if (button == "red") {
+            playRed();
+            playerSequence.push(1);
+            console.log(playerSequence);
+        }
 
-            if (button == "red") {
-                playRed();
-                playerSequence.push(1);
-                console.log(playerSequence);
-            }
+        if (button == "green") {
+            playGreen();
+            playerSequence.push(2);
+            console.log(playerSequence);
+        }
 
-            if (button == "green") {
-                playGreen();
-                playerSequence.push(2);
-                console.log(playerSequence);
-            }
+        if (button == "blue") {
+            playBlue();
+            playerSequence.push(3);
+            console.log(playerSequence);
+        }
 
-            if (button == "blue") {
-                playBlue();
-                playerSequence.push(3);
-                console.log(playerSequence);
-            }
-
-            if (button == "yellow") {
-                playYellow();
-                playerSequence.push(4);
-                console.log(playerSequence);
-            }
-        });
-    }
+        if (button == "yellow") {
+            playYellow();
+            playerSequence.push(4);
+            console.log(playerSequence);
+        }
+    });
 });
 
+
 function playSequence() {
+    sequenceIndex = 0;
+    turn = ++;
+    console.log(turn);
 
-    for (var i = 0; i < gameSequence.length; i++) {
+    var animateInterval = setInterval(function() {
+        if (sequenceIndex === turn-1) {
+            active = true;
+            clearInterval(animateInterval);
+        }
 
-      
-      
-
-        if (gameSequence[i] === 1) {
+        if (gameSequence[sequenceIndex] === 1) {
             playRed();
         }
-        if (gameSequence[i] === 2) {
+        if (gameSequence[sequenceIndex] === 2) {
             playGreen();
         }
-        if (gameSequence[i] === 3) {
+        if (gameSequence[sequenceIndex] === 3) {
             playBlue();
         }
-        if (gameSequence[i] === 4) {
+        if (gameSequence[sequenceIndex] === 4) {
             playYellow();
         }
-    }
+        sequenceIndex++;
+        console.log(sequenceIndex);
+
+    }, 800);
     
-    checkPlayerTurn();
+
+    /* checkPlayerTurn(); */
 }
 
 /*
