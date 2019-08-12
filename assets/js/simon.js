@@ -2,6 +2,7 @@ var turn = 0;
 var sequenceIndex = 0;
 var gameSequence = [];
 var playerSequence = [];
+var playerIndex = 0;
 var active = false;
 /*
 var redAudio = document.getElementById("red-audio");
@@ -74,7 +75,7 @@ $(document).ready(function() {
     $(".col-button").click(function() {
 
         button = $(this).attr("id");
-        
+
         if (button == "red" && active == true) {
             playRed();
             playerSequence.push(1);
@@ -110,6 +111,7 @@ function playSequence() {
     sequenceIndex = 0;
     turn++;
     console.log(turn);
+    active = false;
 
     var animateInterval = setInterval(function() {
         if (sequenceIndex === turn - 1) {
@@ -138,10 +140,14 @@ function playSequence() {
 
 
 function checkPlayerTurn() {
-
-    if (gameSequence == playerSequence) {
-        score++;
+    playerIndex = 0;
+    
+    if (gameSequence[playerIndex] == playerSequence[playerIndex]) {
+        if (playerSequence.length == turn) {
+            playSequence();
+        }
+        else {
+            playerIndex++;
+        }
     }
 }
-
-
