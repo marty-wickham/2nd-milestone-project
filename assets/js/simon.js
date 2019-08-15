@@ -1,17 +1,17 @@
-var turn = 0;
-var sequenceIndex = 0;
-var gameSequence = [];
-var playerSequence = [];
-var playerIndex = 0;
+var turn = 0;               // keeps track of the current turn
+var sequenceIndex = 0;      // keeps track of the animation sequence
+var gameSequence = [];      // stores the games sequence
+var playerSequence = [];    // stores the players sequence
+var playerIndex = 0;        // keeps track of the players current position in the sequnce
 var active = false;
 
-const redAudio = document.getElementById("red-audio");
+const redAudio = document.getElementById("red-audio");      // game sounds
 const greenAudio = document.getElementById("green-audio");
 const blueAudio = document.getElementById("blue-audio");
 const yellowAudio = document.getElementById("yellow-audio");
 const gameOver = document.getElementById("game-over");
 
-// prefilling the sequence of numbers
+// function to prefill the sequence of numbers
 
 function fillArray() {
     for (var i = 0; i < 30; i++) {
@@ -153,7 +153,7 @@ function checkPlayerTurn() {
     if (gameSequence[playerIndex - 1] == playerSequence[playerIndex - 1]) {
 
         if (playerSequence.length == turn) {
-            $("#current-score").text(turn);
+            $("#counter").text(turn);
             setTimeout(playSequence, 1000);
         }
         return;
