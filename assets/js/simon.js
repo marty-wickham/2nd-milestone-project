@@ -4,11 +4,12 @@ var gameSequence = [];
 var playerSequence = [];
 var playerIndex = 0;
 var active = false;
-/*
-var redAudio = document.getElementById("red-audio");
-var greenAudio = document.getElementById("green-audio");
-var blueAudio = document.getElementById("blue-audio");
-var yellowAudio = document.getElementById("yellow-audio"); */
+
+const redAudio = document.getElementById("red-audio");
+const greenAudio = document.getElementById("green-audio");
+const blueAudio = document.getElementById("blue-audio");
+const yellowAudio = document.getElementById("yellow-audio");
+const gameOver = document.getElementById("game-over");
 
 // prefilling the sequence of numbers
 
@@ -22,48 +23,53 @@ function fillArray() {
 // animation functions for each button
 
 function playRed() {
+    redAudio.play();
+
     $("#red").addClass("highlight-red");
 
     setTimeout(function() {
         $("#red").removeClass("highlight-red")
 
     }, 500);
-    /* redAudio.play;*/
 }
 
 function playGreen() {
+    greenAudio.play();
+
     $("#green").addClass("highlight-green");
 
     setTimeout(function() {
         $("#green").removeClass("highlight-green")
 
     }, 500);
-    /*  greenAudio.play;*/
 }
 
 function playBlue() {
+    blueAudio.play();
+
     $("#blue").addClass("highlight-blue");
 
     setTimeout(function() {
         $("#blue").removeClass("highlight-blue")
 
     }, 500);
-    /* blueAudio.play;*/
 }
 
 function playYellow() {
+    yellowAudio.play();
+
     $("#yellow").addClass("highlight-yellow");
 
     setTimeout(function() {
         $("#yellow").removeClass("highlight-yellow")
 
     }, 500);
-    /* yellowAudio.play;*/
 }
 
 // making sure the page has fully loaded before associating the buttons to functions.
 
 $(document).ready(function() {
+
 
     $("#start-btn").click(function() {
         turn = 0;
@@ -109,6 +115,8 @@ $(document).ready(function() {
 
 function playSequence() {
     sequenceIndex = 0;
+    playerIndex = 0;
+    playerSequence = [];
     turn++;
     console.log(turn);
     active = false;
@@ -140,14 +148,18 @@ function playSequence() {
 
 
 function checkPlayerTurn() {
-    playerIndex = 0;
-    
-    if (gameSequence[playerIndex] == playerSequence[playerIndex]) {
+    playerIndex++;
+
+    if (gameSequence[playerIndex - 1] == playerSequence[playerIndex - 1]) {
+
         if (playerSequence.length == turn) {
-            playSequence();
+            $("#current-score").text(turn);
+            setTimeout(playSequence, 1000);
         }
-        else {
-            playerIndex++;
-        }
+        return;
+    }
+    else {
+        active = false;
+        gameOver.play();
     }
 }
