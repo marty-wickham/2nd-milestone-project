@@ -18,9 +18,12 @@ Due to the nature of the project, the content of the that will be relevant will 
 ### Scope
 
 #### What should the game include?
+* A start button to turn the game on.
 * At the very least, the game needs to have four different colored buttons that flash.
-* The game will also require some sounds to accompany these flashes as well as a game over sound if the player plays the wrong sequence.
-* Note here for button noises and possibly a try again noise.
+* The game will also require some sounds to accompany these flashes.
+* An audio file if the player has made a wrong move.
+* An audio file for a "game over" sound effect.
+* 
 * A strict mode that allows the player to play a slightly harder version of the game.
 
 #### User scenarios
@@ -30,25 +33,24 @@ The user wants to start the game ---
 The ability to press a start button that will activate the game code.
 
 **Scenario:**
-A fan wants to learn more about any other games the business has made ---  
+The player wants to click any of the four colored buttons to play their turn ---  
 **Requirement:**
-The ability to view a catalogue of games the business has produced.
+The ability to click any of the four colored buttons to repeat the game sequence.
 
 **Scenario:**
-A fan wants to share videos and pictures of one of their favourite games ---  
+The user tries to press a any of the colored buttons while the game it is the games turn ---  
 **Requirement:**  
-The ability to share links to the business’ social media pages.
+The buttons are deactivated while it is the games turn.
 
 **Scenario:**
-A fan wants to get in touch about leaving feedback for a way t0 improve one of the games they play ---  
+The user wants to play the game in strict mode ---  
 **Requirement:**  
-The ability to access contact information to send an email to the business.
+A strict mode button that allows the player to play the game in "strict" mode.
 
 ### Structure
 
 #### Information Architecture
-For this project I will be using a standard tree structure. To achieve this, the header of each page will 
-consist of a navigation bar that contains the logo of the business and the main navigational links for each page in the website. 
+This website will consist of a single page to display the game.
 
 ### Skeleton
 
@@ -58,32 +60,12 @@ consist of a navigation bar that contains the logo of the business and the main 
 
 ## Features
 
-### Existing Features
-* Feature 1 - A subscribe bar at th very top of the page that allows th user to subscribe for updates and notifications by submitting their email address 
-                 in a pop up modal.
-
-* Feature 2 - A games catalogue that take the form of cards allows the user to hover over the card and click it which will take them to the playstore/appstore
-                to download the game.  
-
-* Feature 3 - A slideshow allows the user to viewport screenshots and covers for the different gsmes so they have abetter understanding of what each game is about.
-
-* Feature 4 - A contact page allows the user to get in touch with the company about working on projects together in the future, or to leave feedback about games.
-
-* Feature 5 - Social media links allow users to view the companies social media pages to view and share content.
-
-* Feature 6 - A return to top button allows the user to navigate back to the top of the page when they click it.
-
-* Feature 7 - Hover effects help users to identify buttons by changing color and size (navbar). 
- 
-
 ## Technology's Used:
 
 * [HTML5](https://www.w3schools.com/html/html5_intro.asp) - a markup language used to create the structure of the webpage.
 * [CSS3](https://www.w3schools.com/css/) - used to style the HTML code. 
 * [Bootstrap4](https://getbootstrap.com/) - a front-end component library used to build responsive mobile-first desifn for this webpage.
-* [Font Awesome](https://fontawesome.com/) - an icon library and toolkit used to implement various icons and social logos on this webpage
-* [Google Fonts](https://fonts.google.com/) - a library of fonts that can eb imported in to your projects.
-* [Cloud9](https://c9.io/wiickmar) - This is the IDE used to write and test the code for this project.
+* [Cloud9 - AWS](https://c9.io/wiickmar) - This is the IDE used to write and test the code for this project.
 * [Git](https://git-scm.com/) - Git is a tool that is used to track and store changes to your codes as you work. It stores your code in a local repository.
 * [Github](https://github.com/) - Github is a remote repository used to store our code. It is also used to deploy this project. 
 
