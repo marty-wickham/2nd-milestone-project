@@ -97,7 +97,7 @@
 #start-btn {
     height: 50px;
     width: 50px;
-    background-color: red;
+    background-color: darkred;
     border-radius: 50%;
     border: 5px solid black;
     z-index: 5;
@@ -106,7 +106,7 @@
 #strict-btn {
     height: 50px;
     width: 50px;
-    background-color: yellow;
+    background-color: goldenrod;
     border-radius: 50%;
     border: 5px solid black;
 }

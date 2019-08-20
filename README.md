@@ -126,16 +126,16 @@ Finally, I posted my project in the peer-code-review channel on Slack and receiv
 slipped under the rader.
 
 ## Deployment 
-1. The project was written and developed in the Cloud9 IDE.
+1. The project was written and developed in the Cloud9 - AWS IDE.
 2. A local repository was intialized using Git. Regular changes were commited to the local repository.
-3. Github was used as a remote repository, and at the end of each development session, all local commits were pushed to (https://github.com/martycistudent/First-milestone-project)
+3. Github was used as a remote repository, and at the end of each development session, all local commits were pushed to (https://github.com/martycistudent/2nd-milestone-project)
 4. The project’s source file was published from GitHub repository to GitHub pages using GitHub default settings via the master branch.
 5. GitHub Pages was then enabled to publish the site from the master branch following this path:
 .. 1. GitHub repository settings page.
 .. 2. Scrolling down to the GitHub Pages Repository box, the master branch was selected from the dropdown menu.
 .. 3. The action was saved by clicking the save button.
 
-6. The Project’s source file is now published as a site on GitHub Pages at [Astirian-Rae Games](https://martycistudent.github.io/First-milestone-project/)
+6. The Project’s source file is now published as a site on GitHub Pages at [Simon Game](https://martycistudent.github.io/2nd-milestone-project/)
 
 ## Credits
 ### Game Layout/ Design 

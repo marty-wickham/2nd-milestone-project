@@ -1,11 +1,12 @@
-var turn = 0;               // keeps track of the current turn
-var sequenceIndex = 0;      // keeps track of the animation sequence
-var gameSequence = [];      // stores the games sequence
-var playerSequence = [];    // stores the players sequence
-var playerIndex = 0;        // keeps track of the players current position in the sequnce
-var active = false;
+var turn = 0; // keeps track of the current turn
+var sequenceIndex = 0; // keeps track of the animation sequence
+var gameSequence = []; // stores the games sequence
+var playerSequence = []; // stores the players sequence
+var playerIndex = 0; // keeps track of the players current position in the sequnce
+var active = false; // whether or not the buttons are activated
+var strict = false;
 
-const redAudio = document.getElementById("red-audio");      // game sounds
+const redAudio = document.getElementById("red-audio"); // game sounds
 const greenAudio = document.getElementById("green-audio");
 const blueAudio = document.getElementById("blue-audio");
 const yellowAudio = document.getElementById("yellow-audio");
@@ -72,11 +73,20 @@ $(document).ready(function() {
 
 
     $("#start-btn").click(function() {
+        $("#counter").text(0);
         turn = 0;
         gameSequence = [];
         fillArray();
         playSequence();
+        console.log(strict);
+        
+        $(this).addClass("highlight-red");
     });
+
+    $("#strict-btn").click(function() {
+        $(this).addClass("highlight-yellow");
+        strict = true;
+    })
 
     $(".col-button").click(function() {
 
