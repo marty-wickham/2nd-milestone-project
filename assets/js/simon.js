@@ -5,6 +5,7 @@ var playerSequence = []; // stores the players sequence
 var playerIndex = 0; // keeps track of the players current position in the sequnce
 var active = false; // whether or not the buttons are activated
 var strict = false;
+var start = false;
 
 const redAudio = document.getElementById("red-audio"); // game sounds
 const greenAudio = document.getElementById("green-audio");
@@ -73,20 +74,27 @@ $(document).ready(function() {
 
 
     $("#start-btn").click(function() {
+        start = true;
         $("#counter").text(0);
         turn = 0;
         gameSequence = [];
         fillArray();
         playSequence();
-        console.log(strict);
-        
+        console.log("strict is " + strict);
+
         $(this).addClass("highlight-red");
     });
 
     $("#strict-btn").click(function() {
-        $(this).addClass("highlight-yellow");
-        strict = true;
-    })
+        if (start == true) {
+            strict = false;
+        }
+        else {
+            $(this).addClass("highlight-yellow");
+            strict = true;
+            console.log("strict is " + strict);
+        }
+    });
 
     $(".col-button").click(function() {
 
@@ -128,14 +136,14 @@ function playSequence() {
     playerIndex = 0;
     playerSequence = [];
     turn++;
-    console.log(turn);
+    console.log("The turn is " + turn);
     active = false;
 
     var animateInterval = setInterval(function() {
-        if (sequenceIndex === turn - 1) {
+        if (sequenceIndex === turn-1) {
             active = true;
             clearInterval(animateInterval);
-            console.log(active);
+            console.log("active is " + active);
         }
 
         if (gameSequence[sequenceIndex] === 1) {
@@ -151,16 +159,18 @@ function playSequence() {
             playYellow();
         }
         sequenceIndex++;
-        console.log(sequenceIndex);
+        console.log("sequenceIndex is " + sequenceIndex);
 
     }, 800);
 }
 
 
 function checkPlayerTurn() {
-    playerIndex++;
+    
 
-    if (gameSequence[playerIndex - 1] == playerSequence[playerIndex - 1]) {
+    if (gameSequence[playerIndex] == playerSequence[playerIndex]) {
+        
+        playerIndex++;
 
         if (playerSequence.length == turn) {
             $("#counter").text(turn);
@@ -168,8 +178,18 @@ function checkPlayerTurn() {
         }
         return;
     }
-    else {
+    else if (strict == true) {
+        
         active = false;
         gameOver.play();
+    }
+    else{
+        
+        setTimeout(function() {
+            $("#counter").text("!");
+        }, 200);
+        
+        turn--;
+        setTimeout(playSequence, 1000);
     }
 }

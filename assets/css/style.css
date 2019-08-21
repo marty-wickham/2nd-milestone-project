@@ -100,7 +100,6 @@
     background-color: darkred;
     border-radius: 50%;
     border: 5px solid black;
-    z-index: 5;
 }
 
 #strict-btn {
@@ -115,6 +114,16 @@
     text-align: center;
     margin-top: 10px;
 }
+
+.fa-power-off {
+    height: 30px;
+    width: 30px;
+}
+/*
+.power-btn {
+    height: 50px;
+    width: 50px;
+}*/
 
 /*-------------------------------------- JS -------------------*/
 
