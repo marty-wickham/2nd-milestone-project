@@ -79,8 +79,10 @@ $(document).ready(function() {
     });
 
     $("#strict-btn").click(function() {
-        if (start == true) {
+        if (start == true || strict == true) {
             strict = false;
+            console.log("strict is " + strict);
+            $(this).removeClass("highlight-yellow");
         }
         else {
             $(this).addClass("highlight-yellow");
@@ -133,11 +135,6 @@ function playSequence() {
     active = false;
 
     var animateInterval = setInterval(function() {
-        if (sequenceIndex === turn - 1) {
-            active = true;
-            clearInterval(animateInterval);
-            console.log("active is " + active);
-        }
 
         if (gameSequence[sequenceIndex] === 1) {
             playRed();
@@ -150,6 +147,11 @@ function playSequence() {
         }
         if (gameSequence[sequenceIndex] === 4) {
             playYellow();
+        }
+        if (sequenceIndex === turn - 1) {
+            active = true;
+            clearInterval(animateInterval);
+            console.log("active is " + active);
         }
         sequenceIndex++;
         console.log("sequenceIndex is " + sequenceIndex);
@@ -164,7 +166,7 @@ function checkPlayerTurn() {
 
         playerIndex++;
 
-        if (playerSequence.length == turn) {
+        if (playerSequence.length === turn) {
             active = false;
             $("#counter").text(turn);
             setTimeout(playSequence, 1000);
@@ -178,10 +180,7 @@ function checkPlayerTurn() {
     }
     else {
 
-        setTimeout(function() {
-            $("#counter").text("!");
-        }, 200);
-
+        active = false;
         turn--;
         setTimeout(playSequence, 1000);
     }
