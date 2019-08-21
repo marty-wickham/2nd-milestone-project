@@ -26,45 +26,37 @@ function fillArray() {
 
 function playRed() {
     redAudio.play();
-
     $("#red").addClass("highlight-red");
 
     setTimeout(function() {
         $("#red").removeClass("highlight-red")
-
     }, 500);
 }
 
 function playGreen() {
     greenAudio.play();
-
     $("#green").addClass("highlight-green");
 
     setTimeout(function() {
         $("#green").removeClass("highlight-green")
-
     }, 500);
 }
 
 function playBlue() {
     blueAudio.play();
-
     $("#blue").addClass("highlight-blue");
 
     setTimeout(function() {
         $("#blue").removeClass("highlight-blue")
-
     }, 500);
 }
 
 function playYellow() {
     yellowAudio.play();
-
     $("#yellow").addClass("highlight-yellow");
 
     setTimeout(function() {
         $("#yellow").removeClass("highlight-yellow")
-
     }, 500);
 }
 
@@ -83,6 +75,7 @@ $(document).ready(function() {
         console.log("strict is " + strict);
 
         $(this).addClass("highlight-red");
+        $("#counter-display").addClass("highlight-red");
     });
 
     $("#strict-btn").click(function() {
@@ -140,7 +133,7 @@ function playSequence() {
     active = false;
 
     var animateInterval = setInterval(function() {
-        if (sequenceIndex === turn-1) {
+        if (sequenceIndex === turn - 1) {
             active = true;
             clearInterval(animateInterval);
             console.log("active is " + active);
@@ -166,29 +159,29 @@ function playSequence() {
 
 
 function checkPlayerTurn() {
-    
 
     if (gameSequence[playerIndex] == playerSequence[playerIndex]) {
-        
+
         playerIndex++;
 
         if (playerSequence.length == turn) {
+            active = false;
             $("#counter").text(turn);
             setTimeout(playSequence, 1000);
         }
         return;
     }
     else if (strict == true) {
-        
+
         active = false;
         gameOver.play();
     }
-    else{
-        
+    else {
+
         setTimeout(function() {
             $("#counter").text("!");
         }, 200);
-        
+
         turn--;
         setTimeout(playSequence, 1000);
     }

@@ -78,7 +78,7 @@
 #counter-display {
     height: 50px;
     width: 60px;
-    background-color: red;
+    background-color: darkred;
     border: 5px solid black;
     border-radius: 10%;
 }
