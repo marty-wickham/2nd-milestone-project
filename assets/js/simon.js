@@ -27,7 +27,7 @@ function fillArray() {
 function playRed() {
     redAudio.play();
     $("#red").addClass("highlight-red");
-
+    
     setTimeout(function() {
         $("#red").removeClass("highlight-red")
     }, 500);
@@ -66,18 +66,6 @@ $(document).ready(function() {
 
     $("#start-btn").click(function() {
 
-        start = true;
-        turn = 0
-        gameSequence = [];
-        fillArray();
-        playSequence();
-        console.log("strict is " + strict);
-
-        $("#counter").text(0);
-        $(this).addClass("highlight-red");
-        $("#counter-display").addClass("highlight-red");
-
-/*
         if (start == true) {
             turn = 0;
             sequenceIndex = 0;
@@ -90,8 +78,22 @@ $(document).ready(function() {
 
             $("#counter").text("--");
             $(this).removeClass("highlight-red");
-            $("#counter-display").removeClass("highlight-red"); 
-        } */
+            $("#counter-display").removeClass("highlight-red");
+        }
+        else {
+            start = true;
+            turn = 0;
+            gameSequence = [];
+            sequenceIndex = 0;
+            fillArray();
+            playSequence();
+            console.log("strict is " + strict);
+            console.log("start is " + start);
+
+            $("#counter").text(0);
+            $(this).addClass("highlight-red");
+            $("#counter-display").addClass("highlight-red");
+        }
     });
 
     $("#strict-btn").click(function() {
@@ -198,7 +200,7 @@ function checkPlayerTurn() {
         gameOver.play();
     }
     else {
-        
+
         alert("Wrong move! Try again.");
         active = false;
         turn--;
