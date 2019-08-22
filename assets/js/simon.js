@@ -16,7 +16,7 @@ const gameOver = document.getElementById("game-over");
 // function to prefill the sequence of numbers
 
 function fillArray() {
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < 3; i++) {
         gameSequence.push(Math.floor((Math.random() * 4) + 1));
     }
     console.log(gameSequence);
@@ -171,7 +171,11 @@ function checkPlayerTurn() {
             $("#counter").text(turn);
             setTimeout(playSequence, 1000);
         }
-        return;
+        else {
+            if (playerSequence.length === gameSequence.length) {
+                alert("You win!");
+            }
+        }
     }
     else if (strict == true) {
 

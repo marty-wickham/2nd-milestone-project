@@ -2,7 +2,7 @@
 # Second Milestone Project / Simon Game
 ____
 
-Simon is an electronic memory game created in real life. The device creates a sequence, displayed by four coloured flashing lights accomapnied by tones, and requires a user to repeat the sequence.
+Simon is an electronic memory game created in real life(https://en.wikipedia.org/wiki/Simon_(game)). The device creates a sequence, displayed by four coloured flashing lights accomapnied by tones, and requires a user to repeat the sequence.
 This is the link to the deployed webapge: [Simon Game](https://martycistudent.github.io/2nd-milestone-project/)
 
 ## UX Design:
@@ -65,59 +65,32 @@ This website will consist of a single page to display the game.
 * [HTML5](https://www.w3schools.com/html/html5_intro.asp) - a markup language used to create the structure of the webpage.
 * [CSS3](https://www.w3schools.com/css/) - used to style the HTML code. 
 * [Bootstrap4](https://getbootstrap.com/) - a front-end component library used to build responsive mobile-first desifn for this webpage.
-* [Cloud9 - AWS](https://c9.io/wiickmar) - This is the IDE used to write and test the code for this project.
+* [JavaScript](https://www.w3schools.com/js/) - the coding language used to write the games functionality.
+* [jQuery](https://jquery.com/) - a JavaScript library used for HTML document traversal and manipulation, event handling and animation.
+* [Cloud9 - AWS](https://www.awseducate.com/student/s/awssite) - This is the IDE used to write and test the code for this project.
 * [Git](https://git-scm.com/) - Git is a tool that is used to track and store changes to your codes as you work. It stores your code in a local repository.
 * [Github](https://github.com/) - Github is a remote repository used to store our code. It is also used to deploy this project. 
 
 ## Testing
-In order to ensure the website functioned as expected, all of the testing for this project was done using the browser web developer tools. This was a very 
-important tool for me through the creative process as it helped me to isolate where the problems were in my code. The issues that this helped me resolve 
-include:
+In order to ensure the game functioned as expected, I tested the code for the game as it was written, function by function. 
+This was important as it allowed me to write a particualr function, and know what values I expected to be produced at the end of 
+that functions execution, before moving onto the next function.
+To track the changing values of different varibles in my javscript file I used "console.log" statements, to print a variables value
+to the console. In order to under stand what variable I was looking at I tpically used a string stating the name of the variable.
+I.E console.log("strict is " + strict);
+The issues that this helped me resolve include:
 
-* Navigation bar links:
+* 
 .. 1. Click each link on the main page to verify they work.
 .. 2. Navigate to "Contact" page.
 .. 3. Click each link on the "Contact" page to verify that they work.
 
-* Contact form:
-.. 1. Go to the "Contact Us" page.
+* Games Buttons:
+.. 1. Add relevant classes.
 .. 2. Try to submit the empty form and verify that an error message about the required fields appears.
 .. 3. Try to submit the form with an invalid email address and verify that an error message appears.
 .. 4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-* Subscribe button/ Modal:
-.. 1. Click "subscribe" button.
-.. 2. Try to submit without any information and verify that an error message about the required fields appears.
-.. 3. Try t submit an invalid email address and and verify that a relevant error message appears.
-.. 4. Verify that a successful message appears by submitting a valid email address.
-
-* Game download links:
-.. 1. Click on the "Games" link in the navigation bar.
-.. 2. Click each card to verify that they open up the correct app page in a new tab.
-
-* Social Media links:
-.. 1. Go to the footer of the home page.
-.. 2. Click each link to verify that they open up the correct social media page in a new tab.
-
-* Hover effects:
-.. 1. Hover over any buttons and links in the project.
-.. 2. Ensure the use of appropriate color and time transitions to help ensure a good user experience.
-
-* Grid system:
-.. 1. Open bwoser developer tools. 
-.. 2. Display device toolbar. 
-.. 3. Select iPhone 5SE.
-.. 4. Review layout for small screen widths.
-.. 5. Select Ipad in the device toolbar.
-.. 6. Review layout for medium screen widths.
-.. 7. Select Laptop in the device toolbar.
-.. 8. Review layout for large screen sizes.
-.. 9. Make any necessary changes. 
-
-* Layout - mostly padding and margins, to ensure adequate spacing between elements as well as sizing for elements.
-
-* Media queries - certain elements that might overflow such as titles, on very small screen sizes. Viweing the change of elements with screen sizes allowed
-  me to make the necessary changes so that elemnts were proportional across differnet screen widths. 
 
 I used a *code validator* on [W3 Markup Validation Service](https://validator.w3.org/#validate_by_input) to checks for any errors that needed to be 
 fixed in my code. 
@@ -138,8 +111,8 @@ slipped under the rader.
 6. The Project’s source file is now published as a site on GitHub Pages at [Simon Game](https://martycistudent.github.io/2nd-milestone-project/)
 
 ## Credits
-### Game Layout/ Design 
-
+### Game Layout/ Design
+The design for this game was based off the real life Simon game.
 
 ### Acknowledgements 
 For the main layout of this project I took inspiration from <https://www.zelda.com/> and <https://bethesda.net/en/dashboard>. For more
