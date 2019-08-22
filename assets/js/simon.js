@@ -16,7 +16,7 @@ const gameOver = document.getElementById("game-over");
 // function to prefill the sequence of numbers
 
 function fillArray() {
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 5; i++) {
         gameSequence.push(Math.floor((Math.random() * 4) + 1));
     }
     console.log(gameSequence);
@@ -65,16 +65,33 @@ function playYellow() {
 $(document).ready(function() {
 
     $("#start-btn").click(function() {
+
         start = true;
-        $("#counter").text(0);
-        turn = 0;
+        turn = 0
         gameSequence = [];
         fillArray();
         playSequence();
         console.log("strict is " + strict);
 
+        $("#counter").text(0);
         $(this).addClass("highlight-red");
         $("#counter-display").addClass("highlight-red");
+
+/*
+        if (start == true) {
+            turn = 0;
+            sequenceIndex = 0;
+            gameSequence = [];
+            playerSequence = [];
+            playerIndex = 0;
+            active = false;
+            strict = false;
+            start = false;
+
+            $("#counter").text("--");
+            $(this).removeClass("highlight-red");
+            $("#counter-display").removeClass("highlight-red"); 
+        } */
     });
 
     $("#strict-btn").click(function() {
@@ -169,8 +186,7 @@ function checkPlayerTurn() {
             active = false;
             $("#counter").text(turn);
             setTimeout(playSequence, 1000);
-        }
-        else {
+
             if (playerSequence.length === gameSequence.length) {
                 alert("You win!");
             }
@@ -182,7 +198,8 @@ function checkPlayerTurn() {
         gameOver.play();
     }
     else {
-
+        
+        alert("Wrong move! Try again.");
         active = false;
         turn--;
         setTimeout(playSequence, 1000);
