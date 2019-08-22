@@ -64,7 +64,6 @@ function playYellow() {
 
 $(document).ready(function() {
 
-
     $("#start-btn").click(function() {
         start = true;
         $("#counter").text(0);

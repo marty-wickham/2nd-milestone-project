@@ -23,7 +23,6 @@ Due to the nature of the project, the content of the that will be relevant will 
 * The game will also require some sounds to accompany these flashes.
 * An audio file if the player has made a wrong move.
 * An audio file for a "game over" sound effect.
-* 
 * A strict mode that allows the player to play a slightly harder version of the game.
 
 #### User scenarios
@@ -55,8 +54,6 @@ This website will consist of a single page to display the game.
 ### Skeleton
 
 #### Wireframe
-[A link to my Mobile wireframe](https://github.com/martycistudent/First-milestone-project/tree/master/wireframes/mobile%20wireframes)
-[A link to my Desktop wireframe](https://github.com/martycistudent/First-milestone-project/blob/master/Wireframe/Screenshot%20(52).png)
 
 ## Features
 
@@ -67,7 +64,7 @@ This website will consist of a single page to display the game.
 * [Bootstrap4](https://getbootstrap.com/) - a front-end component library used to build responsive mobile-first desifn for this webpage.
 * [JavaScript](https://www.w3schools.com/js/) - the coding language used to write the games functionality.
 * [jQuery](https://jquery.com/) - a JavaScript library used for HTML document traversal and manipulation, event handling and animation.
-* [Cloud9 - AWS](https://www.awseducate.com/student/s/awssite) - This is the IDE used to write and test the code for this project.
+* [Cloud9 - AWS](https://docs.aws.amazon.com/cloud9/latest/user-guide/welcome.html) - This is the IDE used to write and test the code for this project.
 * [Git](https://git-scm.com/) - Git is a tool that is used to track and store changes to your codes as you work. It stores your code in a local repository.
 * [Github](https://github.com/) - Github is a remote repository used to store our code. It is also used to deploy this project. 
 
@@ -86,11 +83,9 @@ The issues that this helped me resolve include:
 .. 3. Click each link on the "Contact" page to verify that they work.
 
 * Games Buttons:
-.. 1. Add relevant classes.
-.. 2. Try to submit the empty form and verify that an error message about the required fields appears.
-.. 3. Try to submit the form with an invalid email address and verify that an error message appears.
-.. 4. Try to submit the form with all inputs valid and verify that a success message appears.
-
+.. 1. Use jQuery's addClass to highlight different buttons.
+.. 2. Try to click the buttons and check if their new classes are added.
+.. 3. Try to click the buttons again to remove their new classes.
 
 I used a *code validator* on [W3 Markup Validation Service](https://validator.w3.org/#validate_by_input) to checks for any errors that needed to be 
 fixed in my code. 
@@ -112,8 +107,16 @@ slipped under the rader.
 
 ## Credits
 ### Game Layout/ Design
-The design for this game was based off the real life Simon game.
+The design for this game was based off the real life Simon game and this particular build of the game. 
+(https://codepen.io/BenLBlood/pen/LGLEoJ).
 
 ### Acknowledgements 
-For the main layout of this project I took inspiration from <https://www.zelda.com/> and <https://bethesda.net/en/dashboard>. For more
-specific features I also received inspiration from our Bootstrap classes creating the Whiskey Drop page and the Rosie Odenkirk resume page. 
+To help me get started writing the code for this project, I found various different versions of the game made 
+by different people, as well as some tutorials. Below is a list of links to the different code bases I examined 
+to get an idea of how to tackle this project:
+
+* https://www.youtube.com/watch?v=n_ec3eowFLQ
+* https://www.youtube.com/watch?v=9MTR3V2XpRI
+* https://medium.com/front-end-weekly/create-simon-game-in-javascript-d53b474a7416
+* https://codepen.io/BenLBlood/pen/LGLEoJ
+* https://github.com/bethqiang/simon-game
