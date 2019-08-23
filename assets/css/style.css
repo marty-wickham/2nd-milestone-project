@@ -17,10 +17,10 @@
 }
 
 .col-button {
-    width: 205px;
-    height: 205px;
+    width: 215px;
+    height: 215px;
     position: absolute;
-    margin: 30px;
+    margin: 25px;
 }
 
 #red {
@@ -59,7 +59,7 @@
     height: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 25px solid black;
+    border: 20px solid black;
 }
 
 #game-title {
