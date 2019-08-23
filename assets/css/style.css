@@ -1,15 +1,15 @@
 /*-------------------------------------- Simon Game -------------------*/
 
 .page-container {
-    height: 1000px;
+    height: 650px;
     background-color: gray;
     padding-top: 25px;
     background-image: url("http://wallpoper.com/images/00/31/33/51/black-background_00313351.jpg");
 }
 
 .game-container {
-    max-width: 700px;
-    height: 700px;
+    max-width: 500px;
+    height: 500px;
     margin: 0 auto;
     position: relative;
     background-color: black;
@@ -17,8 +17,8 @@
 }
 
 .col-button {
-    width: 305px;
-    height: 305px;
+    width: 205px;
+    height: 205px;
     position: absolute;
     margin: 30px;
 }
@@ -64,21 +64,22 @@
 
 #game-title {
     text-align: center;
-    font-size: 60px;
+    font-size: 3em;
     font-weight: bold;
     color: black;
-    margin-top: 30px;
+    margin-top: 15px
+    ;
 }
 
 .btn-box {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 5px;
     text-align: center;
 }
 
 #counter-display {
-    height: 50px;
-    width: 60px;
+    height: 40px;
+    width: 45px;
     background-color: darkred;
     border: 5px solid black;
     border-radius: 10%;
@@ -96,16 +97,16 @@
 
 
 #start-btn {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     background-color: darkred;
     border-radius: 50%;
     border: 5px solid black;
 }
 
 #strict-btn {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     background-color: goldenrod;
     border-radius: 50%;
     border: 5px solid black;
