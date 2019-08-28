@@ -77,15 +77,48 @@ to the console. In order to under stand what variable I was looking at I tpicall
 I.E console.log("strict is " + strict);
 The issues that this helped me resolve include:
 
-* 
-.. 1. Click each link on the main page to verify they work.
-.. 2. Navigate to "Contact" page.
-.. 3. Click each link on the "Contact" page to verify that they work.
-
 * Games Buttons:
-.. 1. Use jQuery's addClass to highlight different buttons.
-.. 2. Try to click the buttons and check if their new classes are added.
-.. 3. Try to click the buttons again to remove their new classes.
+.. 1. Create seperate functions for each buttons animation effects.
+.. 2. Use jQuery's addClass to highlight different buttons when pressed, and set a timeout function to reomve those classes after half a second.
+.. 2. Use the play method on the variable for the respective color to play the associated sound.
+.. 3. Click each colored button to see that the color ias added and removed, ad the game sound plays.
+.. 4. Use a console.log statement to show that when a button is clicked, the correct nummber is pushed to the user's array.
+
+* FillArray function: 
+.. 1. Create a console.log function within the function.
+.. 2. Call the FillArray function when the start button is pressed.
+.. 3. Check the console to see the array is produced, and is the correct length.
+
+* playSequence function: setting the tempo
+.. 1. Use an anonymouse setInterval function to loop through the prefilled array.
+.. 2. Depending on the number at the given index of the array, call the relevant animation function.
+.. 3. Click the start button and check that the playSequence function plays through the array.
+.. 4. Go back to the code and set an apprpriate time interval between each animation.
+
+* playSequence function: controlling movement through the array
+.. 1. Use an if statement within the setInterval function to restrict the animations.
+.. 2. Cick the start button.
+.. 3. Check to see that only the first animation function is played.
+
+* playSequence function: controlling button activation
+.. 1. Set active to true once the sequence is finished.
+.. 1. Press the start button.
+.. 2. Allow the sequence to play. 
+.. 3. Try to click the colored buttons during the animation, making sure they are inactve.
+.. 4. Try to click the buttons again when the sequence is finished.
+
+* checkPlayerTurn function: recalling the playSequence function
+.. 1. Use a conditional statment to check the the users choice matches the value at the 0th index of sequenceindex.
+.. 2. If the players sequence length is equal to the turn + 1, increase the turn value, turn off the buttons, change the counter display and call the playSequence function.
+.. 3. Click the start button, allow sequence to play. 
+.. 4. Click the same colored button.
+.. 5. Check that the playSequence function is called correctly.
+
+* checkPlayerTurn function: wrong move condition
+.. 1. Using an else statment, if the players move is wrong, call an alert box to notify the player, call the playSequence function.
+.. 2. Click the start button allow the sequence to play. 
+.. 3. Click the worng colored button, check for "wrong move" alert.
+.. 4. playSequence should resume. 
 
 I used a *code validator* on [W3 Markup Validation Service](https://validator.w3.org/#validate_by_input) to checks for any errors that needed to be 
 fixed in my code. 

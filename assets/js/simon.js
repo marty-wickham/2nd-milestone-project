@@ -148,12 +148,17 @@ function playSequence() {
     sequenceIndex = 0;
     playerIndex = 0;
     playerSequence = [];
-    turn++;
+   /* turn++; */
     console.log("The turn is " + turn);
     active = false;
 
     var animateInterval = setInterval(function() {
-
+        
+        if (sequenceIndex === turn) {
+            active = true;
+            clearInterval(animateInterval);
+            console.log("active is " + active);
+        }
         if (gameSequence[sequenceIndex] === 1) {
             playRed();
         }
@@ -166,11 +171,6 @@ function playSequence() {
         if (gameSequence[sequenceIndex] === 4) {
             playYellow();
         }
-        if (sequenceIndex === turn - 1) {
-            active = true;
-            clearInterval(animateInterval);
-            console.log("active is " + active);
-        }
         sequenceIndex++;
         console.log("sequenceIndex is " + sequenceIndex);
 
@@ -180,12 +180,13 @@ function playSequence() {
 
 function checkPlayerTurn() {
 
-    if (gameSequence[playerIndex] == playerSequence[playerIndex]) {
+    if (gameSequence[playerIndex] === playerSequence[playerIndex]) {
 
         playerIndex++;
 
-        if (playerSequence.length === turn) {
+        if (playerSequence.length === turn+1) {
             active = false;
+            turn++;
             $("#counter").text(turn);
             setTimeout(playSequence, 1000);
 
@@ -203,7 +204,7 @@ function checkPlayerTurn() {
 
         alert("Wrong move! Try again.");
         active = false;
-        turn--;
         setTimeout(playSequence, 1000);
     }
 }
+ 
