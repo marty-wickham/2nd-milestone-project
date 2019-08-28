@@ -66,21 +66,7 @@ $(document).ready(function() {
 
     $("#start-btn").click(function() {
 
-        if (start === true) {
-            turn = 0;
-            sequenceIndex = 0;
-            gameSequence = [];
-            playerSequence = [];
-            playerIndex = 0;
-            active = false;
-            strict = false;
-            start = false;
-
-            $("#counter").text("--");
-            $(this).removeClass("highlight-red");
-            $("#counter-display").removeClass("highlight-red");
-        }
-        else {
+        if (start === false) {          // The start button will also act as a rest button.
             start = true;
             turn = 0;
             gameSequence = [];
@@ -94,11 +80,14 @@ $(document).ready(function() {
             $(this).addClass("highlight-red");
             $("#counter-display").addClass("highlight-red");
         }
+        else {
+            resetGame();
+        }
     });
 
     $("#strict-btn").click(function() {
 
-        if (start === false) {                  // Changing strict mode should only be available if the game has not yet been started.
+        if (start === false) { // Changing strict mode should only be available if the game has not yet been started.
 
             if (strict === true) {
                 strict = false;
@@ -196,6 +185,7 @@ function checkPlayerTurn() {
 
             if (playerSequence.length === gameSequence.length) {
                 alert("You win!");
+                resetGame();
             }
         }
     }
@@ -213,5 +203,17 @@ function checkPlayerTurn() {
 }
 
 function resetGame() {
-    
+    turn = 0;
+    sequenceIndex = 0;
+    gameSequence = [];
+    playerSequence = [];
+    playerIndex = 0;
+    active = false;
+    strict = false;
+    start = false;
+
+    $("#counter").text("--");
+    $("#start-btn").removeClass("highlight-red");
+    $("#counter-display").removeClass("highlight-red");
+    $("#strict-btn").removeClass("highlight-yellow");
 }
