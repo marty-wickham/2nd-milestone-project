@@ -22,12 +22,12 @@ function fillArray() {
     console.log(gameSequence);
 }
 
-// animation functions for each button
+// animation and sound functions for each button
 
 function playRed() {
     redAudio.play();
     $("#red").addClass("highlight-red");
-    
+
     setTimeout(function() {
         $("#red").removeClass("highlight-red")
     }, 500);
@@ -66,7 +66,7 @@ $(document).ready(function() {
 
     $("#start-btn").click(function() {
 
-        if (start == true) {
+        if (start === true) {
             turn = 0;
             sequenceIndex = 0;
             gameSequence = [];
@@ -97,15 +97,19 @@ $(document).ready(function() {
     });
 
     $("#strict-btn").click(function() {
-        if (start == true || strict == true) {
-            strict = false;
-            console.log("strict is " + strict);
-            $(this).removeClass("highlight-yellow");
-        }
-        else {
-            $(this).addClass("highlight-yellow");
-            strict = true;
-            console.log("strict is " + strict);
+
+        if (start === false) {                  // Changing strict mode should only be available if the game has not yet been started.
+
+            if (strict === true) {
+                strict = false;
+                console.log("strict is " + strict);
+                $(this).removeClass("highlight-yellow");
+            }
+            else {
+                $(this).addClass("highlight-yellow");
+                strict = true;
+                console.log("strict is " + strict);
+            }
         }
     });
 
@@ -148,12 +152,12 @@ function playSequence() {
     sequenceIndex = 0;
     playerIndex = 0;
     playerSequence = [];
-   /* turn++; */
+    /* turn++; */
     console.log("The turn is " + turn);
     active = false;
 
     var animateInterval = setInterval(function() {
-        
+
         if (sequenceIndex === turn) {
             active = true;
             clearInterval(animateInterval);
@@ -184,7 +188,7 @@ function checkPlayerTurn() {
 
         playerIndex++;
 
-        if (playerSequence.length === turn+1) {
+        if (playerSequence.length === turn + 1) {
             active = false;
             turn++;
             $("#counter").text(turn);
@@ -207,4 +211,7 @@ function checkPlayerTurn() {
         setTimeout(playSequence, 1000);
     }
 }
- 
+
+function resetGame() {
+    
+}
