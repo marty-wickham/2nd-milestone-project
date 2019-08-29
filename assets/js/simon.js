@@ -4,8 +4,8 @@ var gameSequence = []; // stores the games sequence
 var playerSequence = []; // stores the players sequence
 var playerIndex = 0; // keeps track of the players current position in the sequnce
 var active = false; // whether or not the buttons are activated
-var strict = false;
-var start = false;
+var strict = false; // whether strict is true or not
+var start = false; // whther the game has started or not
 
 const redAudio = document.getElementById("red-audio"); // game sounds
 const greenAudio = document.getElementById("green-audio");
@@ -66,11 +66,8 @@ $(document).ready(function() {
 
     $("#start-btn").click(function() {
 
-        if (start === false) {          // The start button will also act as a rest button.
+        if (start === false) { // The start button will also act as a reset button.
             start = true;
-            turn = 0;
-            gameSequence = [];
-            sequenceIndex = 0;
             fillArray();
             playSequence();
             console.log("strict is " + strict);
@@ -104,7 +101,7 @@ $(document).ready(function() {
 
     $(".col-button").click(function() {
 
-        button = $(this).attr("id");
+        var button = $(this).attr("id");
 
         if (button == "red" && active == true) {
             playRed();
@@ -141,7 +138,6 @@ function playSequence() {
     sequenceIndex = 0;
     playerIndex = 0;
     playerSequence = [];
-    /* turn++; */
     console.log("The turn is " + turn);
     active = false;
 
@@ -203,14 +199,15 @@ function checkPlayerTurn() {
 }
 
 function resetGame() {
+    active = false;
+    strict = false;
+    start = false;
     turn = 0;
     sequenceIndex = 0;
     gameSequence = [];
     playerSequence = [];
     playerIndex = 0;
-    active = false;
-    strict = false;
-    start = false;
+    
 
     $("#counter").text("--");
     $("#start-btn").removeClass("highlight-red");

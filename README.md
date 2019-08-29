@@ -135,6 +135,14 @@ The issues that this helped me resolve include:
 ⋅⋅4. Click the wrong colored button.
 ⋅⋅5. Check for "Game over" alert and game over sound.
 
+* checkPlayerTurn: adding winning condition
+..1. Add a condition that if the playerSequence length is equal to the gameSequence length.
+..2. Change the prefilled array length to 5 for testing purposes.
+..3. Play through the 5 turns to reach the end of the game.
+..4. Check that the "you win!" alert message is displayed when the final correct move is made.
+..5. Restart the game and click "strict" mode.
+..6. Play through the game again, checking again for the "you win!" alert message.
+
 * start button: reset game 
 ⋅⋅1. If the start button is clicked again after starting the game, it should rest the game.
 ⋅⋅2. Add an "if/else" condition to control the states of the game.
@@ -143,7 +151,15 @@ The issues that this helped me resolve include:
 ⋅⋅5. Click the start button again to make sure the game restarts normally. 
 
 * resetGame function
-* 
+..1. Copy the start buttons reset code into a seperate resetGame function.
+..2. Call the resetGame function in the start button click event.
+..3. Click the start button, to start the game.
+..4.  Click the start button again, checking the counter display is reset, all highlight classes are removed, and all values are reset.
+⋅⋅5. Click the start button again to make sure the game restarts normally.
+..6. Call the restGame function in the winning condition of the checkPlayerTurn function/
+..7. Play through the game.
+..8. After the alert message is played, check to see if the game is automatically reset.
+
 
 I used a *code validator* on [W3 Markup Validation Service](https://validator.w3.org/#validate_by_input) to checks for any errors that needed to be 
 fixed in my code. 
