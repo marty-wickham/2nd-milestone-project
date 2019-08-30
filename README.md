@@ -68,11 +68,11 @@ I.E console.log("strict is " + strict);
 The issues that this helped me resolve include:
 
 * Games Buttons:
-⋅⋅1. Create seperate functions for each buttons animation effects.
-⋅⋅2. Use jQuery's addClass to highlight different buttons when pressed, and set a timeout function to reomve those classes after half a second.
-⋅⋅3. Use the play method on the variable for the respective color to play the associated sound.
-⋅⋅4. Click each colored button to see that the color ias added and removed, ad the game sound plays.
-⋅⋅5. Use a console.log statement to show that when a button is clicked, the correct nummber is pushed to the user's array.
+ 1. Create seperate functions for each buttons animation effects.
+⋅ ⋅2. Use jQuery's addClass to highlight different buttons when pressed, and set a timeout function to reomve those classes after half a second.
+⋅ ⋅3. Use the play method on the variable for the respective color to play the associated sound.
+⋅ ⋅4. Click each colored button to see that the color ias added and removed, ad the game sound plays.
+⋅ ⋅5. Use a console.log statement to show that when a button is clicked, the correct nummber is pushed to the user's array.
 
 * FillArray function: 
 ⋅⋅1. Create a console.log function within the function.
