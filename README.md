@@ -69,96 +69,96 @@ The issues that this helped me resolve include:
 
 * Games Buttons:
  1. Create seperate functions for each buttons animation effects.
-⋅ ⋅2. Use jQuery's addClass to highlight different buttons when pressed, and set a timeout function to reomve those classes after half a second.
-⋅ ⋅3. Use the play method on the variable for the respective color to play the associated sound.
-⋅ ⋅4. Click each colored button to see that the color ias added and removed, ad the game sound plays.
-⋅ ⋅5. Use a console.log statement to show that when a button is clicked, the correct nummber is pushed to the user's array.
+ 2. Use jQuery's addClass to highlight different buttons when pressed, and set a timeout function to reomve those classes after half a second.
+ 3. Use the play method on the variable for the respective color to play the associated sound.
+ 4. Click each colored button to see that the color ias added and removed, ad the game sound plays.
+ 5. Use a console.log statement to show that when a button is clicked, the correct nummber is pushed to the user's array.
 
 * FillArray function: 
-⋅⋅1. Create a console.log function within the function.
-⋅⋅2. Call the FillArray function when the start button is pressed.
-⋅⋅3. Check the console to see the array is produced, and is the correct length.
+ 1. Create a console.log function within the function.
+ 2. Call the FillArray function when the start button is pressed.
+ 3. Check the console to see the array is produced, and is the correct length.
 
 * Start button 
-⋅⋅1. The start button should run the game.
-⋅⋅2. Call the fillArray fucntion.                                                       
-⋅⋅3. Click the start button.
-⋅⋅4. Check the console for the prefilled array.
+ 1. The start button should run the game.
+ 2. Call the fillArray fucntion.                                                       
+ 3. Click the start button.
+ 4. Check the console for the prefilled array.
 
 * playSequence function: setting the tempo
-⋅⋅1. Use an anonymouse setInterval function to loop through the prefilled array.
-⋅⋅2. Depending on the number at the given index of the array, call the relevant animation function.
-⋅⋅3. Add the playSequence function to the start click event.
-⋅⋅4. Click the start button and check that the playSequence function plays through the array.
-⋅⋅5. Go back to the code and set an apprpriate time interval between each animation.
+ 1. Use an anonymouse setInterval function to loop through the prefilled array.
+ 2. Depending on the number at the given index of the array, call the relevant animation function.
+ 3. Add the playSequence function to the start click event.
+ 4. Click the start button and check that the playSequence function plays through the array.
+ 5. Go back to the code and set an apprpriate time interval between each animation.
 
 * playSequence function: controlling movement through the array
-⋅⋅1. Use an if statement within the setInterval function to restrict the animations.
-⋅⋅2. Cick the start button.
-⋅⋅3. Check to see that only the first animation function is played.
+ 1. Use an if statement within the setInterval function to restrict the animations.
+ 2. Cick the start button.
+ 3. Check to see that only the first animation function is played.
 
 * playSequence function: controlling button activation
-⋅⋅1. Set active to true once the sequence is finished.
-⋅⋅1. Press the start button.
-⋅⋅2. Allow the sequence to play. 
-⋅⋅3. Try to click the colored buttons during the animation, making sure they are inactve.
-⋅⋅4. Try to click the buttons again when the sequence is finished.
+ 1. Set active to true once the sequence is finished.
+ 2. Press the start button.
+ 3. Allow the sequence to play. 
+ 4. Try to click the colored buttons during the animation, making sure they are inactve.
+ 5. Try to click the buttons again when the sequence is finished.
 
 * checkPlayerTurn function: recalling the playSequence function
-⋅⋅1. Use a conditional statment to check the the users choice matches the value at the 0th index of sequenceindex.
-⋅⋅2. If the players sequence length is equal to the turn + 1, increase the turn value, turn off the buttons, change the counter display and call the playSequence function.
-⋅⋅3. Add the playSequence function to the start click event.
-⋅⋅4. Click the start button, allow sequence to play. 
-⋅⋅5. Click the same colored button.
-⋅⋅6. Check that the playSequence function is called correctly.
+ 1. Use a conditional statment to check the the users choice matches the value at the 0th index of sequenceindex.
+ 2. If the players sequence length is equal to the turn + 1, increase the turn value, turn off the buttons, change the counter display and call the playSequence function.
+ 3. Add the playSequence function to the start click event.
+ 4. Click the start button, allow sequence to play. 
+ 5. Click the same colored button.
+ 6. Check that the playSequence function is called correctly.
 
 * checkPlayerTurn function: wrong move condition
-⋅⋅1. Using an else statment, if the players move is wrong, call an alert box to notify the player, call the playSequence function.
-⋅⋅2. Click the start button allow the sequence to play. 
-⋅⋅3. Click the worng colored button, check for "wrong move" alert.
-⋅⋅4. playSequence should resume. 
+ 1. Using an else statment, if the players move is wrong, call an alert box to notify the player, call the playSequence function.
+ 2. Click the start button allow the sequence to play. 
+ 3. Click the worng colored button, check for "wrong move" alert.
+ 4. playSequence should resume. 
 
 * Strict button
-⋅⋅1. Write a a click function that toggles whether strict is true or active.
-⋅⋅2. If the button is clicked, add a highlight-yellow class and change active to true. If the button is clicked again, remove the class and change active to false.
-⋅⋅3. Add a console.log statement to display the value of "strict" in the console.
-⋅⋅4. Click the strict button, check for the color change. Check that "strict" = true in the console.
-⋅⋅5. Click the button again, check for the color change and check that "strict" = false in the console.
-⋅⋅6. The button should only be accessible before the user has clicked the start button. Add this condition to the code.
-⋅⋅7. Click the start button.
-⋅⋅8. Click the "strict" button. Check that there is no change to value of "Strict" in the console.
+ 1. Write a a click function that toggles whether strict is true or active.
+ 2. If the button is clicked, add a highlight-yellow class and change active to true. If the button is clicked again, remove the class and change active to false.
+ 3. Add a console.log statement to display the value of "strict" in the console.
+ 4. Click the strict button, check for the color change. Check that "strict" = true in the console.
+ 5. Click the button again, check for the color change and check that "strict" = false in the console.
+ 6. The button should only be accessible before the user has clicked the start button. Add this condition to the code.
+ 7. Click the start button.
+ 8. Click the "strict" button. Check that there is no change to value of "Strict" in the console.
 
 * checkPlayerTurn: adding a strict condition
-⋅⋅1. Add an "else if" condition to the checkPlayerTurn function
-⋅⋅2. Click the "strict" button.
-⋅⋅3. Click the "start" button.
-⋅⋅4. Click the wrong colored button.
-⋅⋅5. Check for "Game over" alert and game over sound.
+ 1. Add an "else if" condition to the checkPlayerTurn function
+ 2. Click the "strict" button.
+ 3. Click the "start" button.
+ 4. Click the wrong colored button.
+ 5. Check for "Game over" alert and game over sound.
 
 * checkPlayerTurn: adding winning condition
-..1. Add a condition that if the playerSequence length is equal to the gameSequence length.
-..2. Change the prefilled array length to 5 for testing purposes.
-..3. Play through the 5 turns to reach the end of the game.
-..4. Check that the "you win!" alert message is displayed when the final correct move is made.
-..5. Restart the game and click "strict" mode.
-..6. Play through the game again, checking again for the "you win!" alert message.
+ 1. Add a condition that if the playerSequence length is equal to the gameSequence length.
+ 2. Change the prefilled array length to 5 for testing purposes.
+ 3. Play through the 5 turns to reach the end of the game.
+ 4. Check that the "you win!" alert message is displayed when the final correct move is made.
+ 5. Restart the game and click "strict" mode.
+ 6. Play through the game again, checking again for the "you win!" alert message.
 
 * start button: reset game 
-⋅⋅1. If the start button is clicked again after starting the game, it should rest the game.
-⋅⋅2. Add an "if/else" condition to control the states of the game.
-⋅⋅3. Click the start button to start the game. 
-⋅⋅4. Click the start button again, checking the counter display is reset, all highlight classes are removed, and all values are reset.
-⋅⋅5. Click the start button again to make sure the game restarts normally. 
+ 1. If the start button is clicked again after starting the game, it should rest the game.
+ 2. Add an "if/else" condition to control the states of the game.
+ 3. Click the start button to start the game. 
+ 4. Click the start button again, checking the counter display is reset, all highlight classes are removed, and all values are reset.
+ 5. Click the start button again to make sure the game restarts normally. 
 
 * resetGame function
-..1. Copy the start buttons reset code into a seperate resetGame function.
-..2. Call the resetGame function in the start button click event.
-..3. Click the start button, to start the game.
-..4.  Click the start button again, checking the counter display is reset, all highlight classes are removed, and all values are reset.
-⋅⋅5. Click the start button again to make sure the game restarts normally.
-..6. Call the restGame function in the winning condition of the checkPlayerTurn function/
-..7. Play through the game.
-..8. After the alert message is played, check to see if the game is automatically reset.
+ 1. Copy the start buttons reset code into a seperate resetGame function.
+ 2. Call the resetGame function in the start button click event.
+ 3. Click the start button, to start the game.
+ 4.  Click the start button again, checking the counter display is reset, all highlight classes are removed, and all values are reset.
+ 5. Click the start button again to make sure the game restarts normally.
+ 6. Call the restGame function in the winning condition of the checkPlayerTurn function/
+ 7. Play through the game.
+ 8. After the alert message is played, check to see if the game is automatically reset.
 
 
 I used a *code validator* on [W3 Markup Validation Service](https://validator.w3.org/#validate_by_input) to checks for any errors that needed to be 
