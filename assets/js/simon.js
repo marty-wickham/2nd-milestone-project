@@ -16,7 +16,7 @@ const gameOver = document.getElementById("game-over");
 // function to prefill the sequence of numbers
 
 function fillArray() {
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 25; i++) {
         gameSequence.push(Math.floor((Math.random() * 4) + 1));
     }
     console.log(gameSequence);
@@ -30,7 +30,7 @@ function playRed() {
 
     setTimeout(function() {
         $("#red").removeClass("highlight-red")
-    }, 500);
+    }, 400);
 }
 
 function playGreen() {
@@ -39,7 +39,7 @@ function playGreen() {
 
     setTimeout(function() {
         $("#green").removeClass("highlight-green")
-    }, 500);
+    }, 400);
 }
 
 function playBlue() {
@@ -48,7 +48,7 @@ function playBlue() {
 
     setTimeout(function() {
         $("#blue").removeClass("highlight-blue")
-    }, 500);
+    }, 400);
 }
 
 function playYellow() {
@@ -57,7 +57,7 @@ function playYellow() {
 
     setTimeout(function() {
         $("#yellow").removeClass("highlight-yellow")
-    }, 500);
+    }, 400);
 }
 
 // making sure the page has fully loaded before associating the buttons to functions.
@@ -180,8 +180,15 @@ function checkPlayerTurn() {
             setTimeout(playSequence, 1000);
 
             if (playerSequence.length === gameSequence.length) {
-                alert("You win!");
-                resetGame();
+
+                $("#counter").text(turn);
+                setTimeout(function() {
+                    alert("You win!!!");
+                }, 250);
+
+                setTimeout(function() {
+                    resetGame();
+                }, 2000);
             }
         }
     }
@@ -189,10 +196,16 @@ function checkPlayerTurn() {
 
         active = false;
         gameOver.play();
+        setTimeout(function() {
+            alert("Game over! Your score is " + turn);
+        }, 250);
+
     }
     else {
 
-        alert("Wrong move! Try again.");
+        setTimeout(function() {
+            alert("Wrong move! Try again.");
+        }, 250);
         active = false;
         setTimeout(playSequence, 1000);
     }
@@ -207,7 +220,7 @@ function resetGame() {
     gameSequence = [];
     playerSequence = [];
     playerIndex = 0;
-    
+
 
     $("#counter").text("--");
     $("#start-btn").removeClass("highlight-red");
