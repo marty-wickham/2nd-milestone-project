@@ -19,7 +19,7 @@ Due to the nature of the project, the content of the that will be relevant will 
 
 #### What should the game include?
 * A start button to turn the game on.
-* At the very least, the game needs to have four different colored buttons that flash.
+* At the very least, the game needs to have four different colored buttons that flash and act as buttons.
 * The game will also require some sounds to accompany these flashes.
 * An audio file if the player has made a wrong move.
 * An audio file for a "game over" sound effect.
@@ -160,6 +160,20 @@ The issues that this helped me resolve include:
  7. Play through the game.
  8. After the alert message is played, check to see if the game is automatically reset.
 
+### Bugs
+
+The first bug I encoutered was when creating the playSequence function. I set the condition inside the if statement to clear the interval
+when the sequenceIndex was equal to the turn. This caused the game to play the fist two colors in the sequence when the start button 
+was pressed. To fix this, I set the condition to clear the interval to equal the turn -1. 
+
+The second bug I encountered was when I had finished making the checkPlayerTurn function. When a wrong turn was made, the bug caused the 
+game to play the entire sequence of colors. To fix this I removed a turn-- statement fromt the else condition of the checkPlayerTurn function, 
+(to negate the turn++ statment in the playSequence function) and moved the turn++ statement to the checkPlayerTurn function. I also reset the clear
+interval condition to account for this change.
+
+The final bug in the game which I have not resolved is, if the game is restarted *during* the gameSequence being played, afterwards when the game is off,
+the colored buttons can be pressed and the "wrong move!" alert will be activated. This also sometimes causes the full sequence to play. 
+However, if the player hits the start button again, this resolves the problem and will start a new game. 
 
 I used a *code validator* on [W3 Markup Validation Service](https://validator.w3.org/#validate_by_input) to checks for any errors that needed to be 
 fixed in my code. 
