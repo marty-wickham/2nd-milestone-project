@@ -172,7 +172,7 @@ game to play the entire sequence of colors. To fix this I removed a turn-- state
 interval condition to account for this change.
 
 The final bug in the game which I have not resolved is, if the game is restarted *during* the gameSequence being played, afterwards when the game is off,
-the colored buttons can be pressed and the "wrong move!" alert will be activated. This also sometimes causes the full sequence to play. 
+the colored buttons can be pressed and the "wrong move!" alert will be activated. 
 However, if the player hits the start button again, this resolves the problem and will start a new game. 
 
 I used a *code validator* on [W3 Markup Validation Service](https://validator.w3.org/#validate_by_input) to checks for any errors that needed to be 
