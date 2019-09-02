@@ -59,6 +59,8 @@ A strict mode button that allows the player to play the game in "strict" mode.
 * [Github](https://github.com/) - Github is a remote repository used to store our code. It is also used to deploy this project. 
 
 ## Testing
+Please note that I have left the games prefilled array at a length of 10 for the project reviewers benefit.
+
 In order to ensure the game functioned as expected, I tested the code for the game as it was written, function by function. 
 This was important as it allowed me to write a particualr function, and know what values I expected to be produced at the end of 
 that functions execution, before moving onto the next function.
@@ -159,7 +161,8 @@ The issues that this helped me resolve include:
  6. Call the restGame function in the winning condition of the checkPlayerTurn function/
  7. Play through the game.
  8. After the alert message is played, check to see if the game is automatically reset.
-
+ 9. 
+ 
 ### Bugs
 
 The first bug I encoutered was when creating the playSequence function. I set the condition inside the if statement to clear the interval
@@ -208,3 +211,6 @@ to get an idea of how to tackle this project:
 * https://medium.com/front-end-weekly/create-simon-game-in-javascript-d53b474a7416
 * https://codepen.io/BenLBlood/pen/LGLEoJ
 * https://github.com/bethqiang/simon-game
+
+To get the game working I had to read up on setTimeout and setInterval functions on Stack Overflow and W3 schools.
+This was also true for including audio files in the game.

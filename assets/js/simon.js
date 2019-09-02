@@ -16,7 +16,7 @@ const gameOver = document.getElementById("game-over");
 // function to prefill the sequence of numbers
 
 function fillArray() {
-    for (var i = 0; i < 25; i++) {
+    for (var i = 0; i < 10; i++) {
         gameSequence.push(Math.floor((Math.random() * 4) + 1));
     }
     console.log(gameSequence);
@@ -99,7 +99,7 @@ $(document).ready(function() {
         }
     });
 
-    $(".col-button").click(function() {
+    $(".col-button").click(function() {                 // What happens when the the player can press each button.
 
         var button = $(this).attr("id");
 
@@ -135,7 +135,7 @@ $(document).ready(function() {
 
 
 function playSequence() {
-    sequenceIndex = 0;
+    sequenceIndex = 0;                      // These variables must be reset in order to play the sequence from the beginning each time
     playerIndex = 0;
     playerSequence = [];
     console.log("The turn is " + turn);
@@ -211,7 +211,7 @@ function checkPlayerTurn() {
     }
 }
 
-function resetGame() {
+function resetGame() {          // resets the game
     active = false;
     strict = false;
     start = false;
